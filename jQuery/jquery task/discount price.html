@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        h2{
+            color: crimson;
+            font-style: oblique;
+        }
+    body{
+        background-color: aquamarine;
+        margin-right: 80px;
+    }
+    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script>
+    $(document).ready(function() {
+     $("button").click(function(){
+      $("#div1").fadeIn();
+     });
+    });
+    getPrice =function discount(){
+                var p=document.getElementById("price").value;
+                var s=document.getElementById("season").value;
+                var d;
+                if(s=="summersale"){
+                    document.getElementById("discount").innerHTML="The discount is 10%";
+                    d=(p-(p*0.1));
+                }
+                else if(s=="onamsale"){
+                    document.getElementById("discount").innerHTML="The discount is 5%";
+                    d=(p-(p*0.05));
+                }
+                else if(s=="vishusale"){
+                    document.getElementById("discount").innerHTML="The discount is 15%";
+                    d=(p-(p*0.15));
+                }
+                document.getElementById("result").innerHTML="The discounted price : Rs "+d;
+            }
+            
+           
+        
+      -->
+  <!-- </script> -->
+</head>
+<!-- <body>
+
+    <h2>DISCOUNT PRICE</h2>
+        <table border="4">
+            
+            <tr>
+                
+                <td>Product Name</td>
+                <td> <input type="name" size="20"></td>
+                
+            </tr>
+           
+            <tr>
+            
+                <td>Product Price</td>
+                <td> <input type="price" size="20"></td>
+            
+            </tr>
+
+             <tr> 
+
+                <td>Season</td>
+                <td> <select>
+                    <option value="summersale">SUMMER SALE</option>
+                     <option value="onamsale">ONAM SALE</option> 
+                     <option value="vishusale">VISHU SALE</option> </select></td>
+             </tr>
+
+
+        </table>
+        <input type="getPrice()" value="GET DISCOUNT PRICE" id="submit" name="submit" onclick="discount()">
+        </form>
+        <div id="discount"></div>
+        <div id="result"></div>
+        
+       
+
+
+</body>
+</html> -->
+<body style="background-color:#99FFFF;">
+    <h2>DISCOUNT PRICE</h2>
+    <form>
+        <table border="4">
+            <tr>
+                <td>Product Name</td>
+                <td><input type="text" name="name" id="name"  size="20"> </td>
+            </tr>
+            <tr>
+                <td>Product Price</td>
+                <td><input type="number" name="price" id="price" size="20"></td>
+            </tr>
+            <tr>
+                <td>Season</td>
+                <td>
+                    <select name="season" id="season">
+                    <option value="newyear">NEWYEAR SALE</option>
+                    <option value="onam">ONAM SALE</option>
+                    <option value="vishu">VISHU SALE</option>
+                    </select>
+                </td>
+            </tr>
+        </table><br>
+        <input type="submit" value="GET DISCOUNT PRICE" id="submit" name="submit" onclick="discount()">
+    </form>
+    <div id="discount"></div>
+    <div id="result"></div>
+    <script>
+        function discount(){
+            var p=document.getElementById("price").value;
+            var s=document.getElementById("season").value;
+            var d;
+            if(s=="newyear"){
+                document.getElementById("discount").innerHTML="The discount is 10%";
+                d=(p-(p*0.1));
+            }
+            else if(s=="onam"){
+                document.getElementById("discount").innerHTML="The discount is 5%";
+                d=(p-(p*0.05));
+            }
+            else if(s=="vishu"){
+                document.getElementById("discount").innerHTML="The discount is 15%";
+                d=(p-(p*0.15));
+            }
+            document.getElementById("result").innerHTML="The discounted price : Rs "+d;
+        }
+    </script>
+</body>
+</html>
